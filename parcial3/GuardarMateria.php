@@ -8,11 +8,11 @@
   $sql = "INSERT INTO materia(nombre, semestre, especialidad) VALUES ('".$nombres."', ".$semestre.", '".$especialidad."')";
 
   if(conexion->query($sql) === TRUE){
-    header("Location: ConsultarMaterias.php");
+    header("Location: consultarMaterias.php");
     $conexion->close();
     exit;
   }else{
     echo"<h2>Ocurrió un error</h2><p>Error: " .$sql . "<br>" .$conexion->error . "<p>";
-    echo"<h3><a href='ConsultarMaterias.php'>Regresar a materias</a></h3>";
+    echo"<h3><a href='consultarMaterias.php'>Regresar a materias</a></h3>";
   }
 ?>
